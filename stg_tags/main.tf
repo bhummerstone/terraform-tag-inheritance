@@ -15,14 +15,14 @@ resource "azurerm_storage_account" "stg_acct" {
   tags = {
       business_owner = "placeholder"
       cost_centre = "placeholder"
-      application = "placeholder"
+      application_name = "placeholder"
   }
 
   lifecycle {
       ignore_changes = [
           tags["business_owner"],
           tags["cost_centre"],
-          tags["application"]
+          tags["application_name"]
       ]
   }
 }
